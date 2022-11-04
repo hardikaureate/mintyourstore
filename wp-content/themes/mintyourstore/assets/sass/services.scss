@@ -1,0 +1,178 @@
+@import "partials/fonts";
+@import "partials/variables";
+@import "partials/spacing.scss";
+
+.services-page{
+    @media screen and (min-width:992px){
+        :target {
+            scroll-margin-top: 100px; 
+        }
+    }
+    .heading-section{
+        h2{
+            margin-bottom: 0;
+            +p,
+            +.section-subtitle{
+                margin-top: 10px;
+            }
+        }
+    }
+    .banner-section{
+        a.btn{
+            margin-top: 50px;
+            color: $color-222222;
+            background-color: $color-white;
+            &:hover{
+                color: $color-white;
+                background-color: $color-24282C;
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+                border-color: $color-white;
+            }
+        }
+        @media screen and (max-width:767px){
+            padding-bottom: 40px;
+        }
+    }
+    .banner-blocks-single{
+        position: relative;
+        z-index: 1;
+        background: rgba($color-white,0.04);
+        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-box-shadow .3s;
+        border: 1px solid rgba($color-white,0.2);
+        &:not(:last-child){
+            margin-right: 20px;
+            @media screen and (max-width:1199px){
+                margin-right: 2.5%;
+            }
+        }
+        @media screen and (max-width:1199px){
+            width: 30.83%;
+        }
+        @media screen and (max-width:767px){
+            width: 100%;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        svg{
+            width: 27px;
+            @media screen and (max-width:767px){
+                width: 100%;
+            }
+        }
+        &:hover{
+            background: $color-95BF47;
+        }
+        a{
+            width: calc(100% - 42px);
+            @media screen and (max-width:767px){
+                width: 100%;
+            }
+            &:hover{
+                color: $color-white;
+            }
+        }
+    }
+    .our-services-section{
+        .section-subtitle{
+            max-width: 830px;
+            margin: 0 auto;
+        }
+        .services-block{
+            border-radius: 10px;
+            .checkdash-full ul{
+                li{
+                    color: $color-666666;
+                    padding-bottom: 13px;
+                    padding-top: 13px;
+                    border-top: 1px solid $color-DDDDDD;
+                    margin-bottom: 0;
+                    line-height: 1.4;
+                    &::before{
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: $color-666666;
+                    }
+                    a{
+                        line-height: 1;
+                        color: $color-666666;
+                        @media screen and (max-width:767px){
+                            line-height: inherit;
+                        }
+                    }
+                }
+            } 
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .testimonial-block{
+        background-image: url(../icons/quote.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 40px) 40px;
+        background-size: 77px;
+        @media screen and (max-width:991px){
+            background-size: 40px;
+        }
+        @media screen and (max-width:767px){
+            background-position: calc(100% - 10px) calc(100% - 10px);
+            background-size: 30px;
+        }
+        .testimonial-image{
+            width: 294px;
+            @media screen and (max-width:991px){
+                width: 200px;
+            }
+            @media screen and (max-width:767px){
+                width: 100%;
+                height: 300px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                line-height: 1;
+                @media screen and (max-width:767px){
+                    object-fit: cover;
+                }
+            }
+        }
+        .testimonial-content{
+            width: calc(100% - 294px);
+            @media screen and (max-width:991px){
+                width: calc(100% - 200px);
+            }
+            @media screen and (max-width:767px){
+                width: 100%;
+            }
+            .testimonial-star{
+                img{
+                    width: 19px;
+                }
+            }
+        }
+    }
+    .our-process-section{
+        .point-digit{
+            top: 60px;
+            right: 30px;
+            font-size: 72px;
+            font-weight: 500;
+            @media screen and (max-width:767px){
+                font-size: 52px;
+                top: 40px;
+            }
+        }
+    }
+
+    .our-services-section {
+        .services-blocks {
+            .services-block{
+                background-color: $color-F1F8FA;
+                &:nth-child(even){
+                    background-color: $color-F2F8FF;
+                }
+            }
+        }
+    }
+}

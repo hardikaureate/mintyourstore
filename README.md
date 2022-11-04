@@ -1,1 +1,1 @@
-# minyyourstore
+# mintyourstore

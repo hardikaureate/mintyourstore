@@ -1,0 +1,802 @@
+@import "partials/fonts";
+@import "partials/variables";
+@import "partials/spacing.scss";
+
+// Common For All Services pages css Start 
+
+.heading-section{
+    h2{
+        margin-bottom: 0;
+        +p,
+        +.section-subtitle{
+            margin-top: 10px;
+        }
+    }
+}
+
+.banner-section{
+    padding-bottom: 190px;
+    @media screen and (max-width:991px){
+        padding-bottom: 140px;
+    }
+    .row{
+        align-items: flex-start;
+        .banner-left{
+            padding-right: 15px;
+            @media screen and (max-width: 1024px){
+                order: 0;
+            }
+        }
+    }
+    .banner-left-inner{
+        padding-top: 30px;
+        @media screen and (max-width: 1024px){
+            max-width: 100%;
+            padding-top: 0;
+        }
+        .banner-up-text{
+            margin-bottom: 20px;
+            line-height: 31px;
+
+            color: $color-white;
+            font-size: $font-22;
+            font-weight: $fw-500;
+            @media screen and (max-width: 1024px){
+                font-size: 12px;
+                line-height: 18px;
+            }
+            @media screen and (max-width: 767px){
+                margin-bottom: 10px;
+            }
+        }
+        h1{
+            margin-bottom: 30px;
+            @media screen and (max-width: 767px){
+                font-size: 30px;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+        }
+        p{
+            color: $color-D7D7D7;
+            font-size: 20px;
+            font-weight: $fw-400;
+            line-height: 32px;
+            @media screen and (max-width:767px){
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+    &.with-form-section{
+        .contact-right{
+            max-width: 530px;
+            margin-left: auto;
+            position: relative;
+            @media screen and (max-width:1024px){
+                max-width: 100%;
+                margin-top: 70px;
+            }
+            @media screen and (max-width:1024px){
+                margin-top: 40px;
+            }
+            .form-block{
+                width: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 1;
+                @media screen and (max-width:1024px){
+                    position: relative;
+                    margin-bottom: -320px;
+                }
+            }
+            .wpcf7{
+              padding: 40px;
+              background-color: transparent;
+              background-image: linear-gradient(180deg, #FBFBFB 0%, #FBFBFB 100%);
+              border-style: solid;
+              border-width: 1px 1px 1px 1px;
+              border-color: #DDDDDD;
+              border-radius: 10px 10px 10px 10px;
+              @media screen and (max-width:767px) {
+                padding: 16px 16px 16px 16px;
+              }
+              .col-md-12{
+                padding-bottom: 20px;
+                margin: 0;
+                @media screen and (max-width:1024px) {
+                  width: 100%;
+                  padding-bottom: 16px;
+                }
+              }
+              .recaptcha{
+                display: block;
+                color: #666666;
+                font-size: 16px;
+                line-height: 28px;
+                a {
+                  color: #000;
+                }
+              }
+              .wpcf7-submit {
+                background-color: #24282C;
+                border: 1px solid #24282C;
+                color: #fff;
+                width: 100%;
+                border-radius: 8px 8px 8px 8px;
+                padding: 15px 32px 15px 32px;
+              }
+              .wpcf7-spinner {
+                display: flex;
+                margin: auto;
+              }
+              textarea {
+                height: 160px;
+                resize: none;
+              }
+            }
+            .wpcf7-not-valid-tip{
+                text-align: left;
+                font-size: 14px;
+            }
+            .wpcf7-response-output{
+                color: $color-222222;
+                font-size: $font-16;
+                margin: 0;
+                text-align: left;
+                @media screen and (max-width:767px) {
+                    font-size: 14px;
+                    line-height: 1.6;
+                }
+            }
+            .recaptcha{
+                text-align: left;
+            }
+            
+        }
+        +.image-content-section{
+            .row{
+                @media screen and (max-width:991px) {
+                    padding-top: 200px;
+                }
+                @media screen and (max-width:767px) {
+                    padding-top: 130px;
+                }
+                .image-section{
+                    max-width: 560px;
+                    @media screen and (max-width:991px) {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+        .contact-right .wpcf7 .submit-form-btn{
+            padding-bottom: 0;
+        }
+    }
+    &.with-image-section{
+        padding-bottom: 80px;
+        .row{
+            align-items: center;
+        }
+        @media screen and (max-width:991px) {
+            .banner-left{
+                order: 1;
+            }
+            .image-right{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            padding-bottom: 40px;
+        }
+    }
+}
+.image-content-section{
+    .section-description{
+        a{
+            color: $color-222222;
+            &:hover{
+                color: $color-de463b
+            }
+        }
+        p{
+            // padding-bottom: 16px;
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    ul{
+        list-style-type: none;
+        margin-bottom: 25px;
+        li{
+            position: relative;
+            padding-left: 20px;
+            &:before{
+                content: '';
+                border: solid $color-444444;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 4px 2px;
+                position: absolute;
+                left: 3px;
+                top: 7px;
+                -webkit-transform: rotate(45deg);
+            }
+        }
+    }
+    .image-section{
+        @media screen and (max-width:991px){
+            justify-content: center;
+        }
+    }
+
+}
+.store-development-section{
+    &.bg-light{
+        .store-development-block-inner{
+            background-color: $color-24282C;
+        }
+        .block-title,
+        .block-desc{
+            color: $color-white;
+        }
+        +.store-development-section{
+            &.bg-light{
+                margin-top: 2px;
+            }
+        }
+    }
+    .heading-section{
+        max-width: 870px;
+        margin: 0 auto 50px;
+        text-align: center;
+        h2{
+            +.section-subtitle{
+                margin-top: 15px;
+            }
+        }
+    }
+    .block-icon{
+        @media screen and (max-width:767px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .btn{
+        padding: 12px 22px;
+    }
+}
+.more-profitable-section{
+    h3{
+        color: $color-222222;
+        font-size: $font-20;
+        line-height: 28px;
+        font-weight: $fw-500;
+        margin-bottom: 30px;
+        padding-top: 40px;
+        @media screen and (max-width:1024px) {
+            font-size: $font-18;
+            line-height: 26px;
+        }
+        @media screen and (max-width:767px) {
+            font-size: $font-16;
+            line-height: 24px;
+        }
+    }
+    .desc-block{
+        p{
+            margin-bottom: 15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .checkmark-round{
+        ul{
+            float: unset;
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            li{
+                padding: 0 0 0 35px;
+                margin: 0 0 20px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $color-222222;
+                @media screen and (max-width:767px){
+                    font-size: $font-14;
+                    line-height: 24px;
+                    padding: 0 0 0 25px;
+                    margin: 0 0 10px;
+                }
+                &:before {
+                    content: '';
+                    background: url('../images/check-round.webp') no-repeat;
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @media screen and (max-width:767px){
+                        height: 16px;
+                        width: 16px;
+                        background-size: cover;
+                    }
+
+                }
+            }
+        }
+    }   
+    .lets-text{
+        padding-top: 15px;
+        color: $color-444444;
+        font-size: $font-16;
+        line-height: 26px;
+    }
+}
+.development-checklist-section{
+    .heading-content{
+        max-width: 900px;
+        // max-width: 700px;
+    }
+    .development-blocks{
+        max-width: 900px;
+        .development-block{
+            padding: 30px 30px 30px 120px;
+            margin-bottom: 20px;
+            position: relative;
+            @media screen and (max-width:767px){
+                padding: 20px 20px 20px 56px;
+            }
+            &:first-child{
+                &::before{
+                    top: 56px;
+                    @media screen and (max-width:767px){
+                        top: 42px;
+                    }
+                }
+            }
+            &:last-child{
+                &::before{
+                    height: 34%;
+                    @media screen and (max-width:767px){
+                        height: 11%;
+                    }
+                }
+            }
+            &:before{
+                content: '';
+                border-left: 1px dashed #ddd;
+                width: 1px;
+                position: absolute;
+                left: 60px;
+                top: 0;
+                height: 114%;
+                @media screen and (max-width:767px){
+                    left: 30px;
+                }
+            }
+            .dev-digit{
+                width: 40px;
+                height: 40px;
+                border: 1px solid #aaa;
+                border-radius: 20px;
+                position: absolute;
+                left: 40px;
+                top: 56px;
+                z-index: 1;
+                @media screen and (max-width:767px){
+                    width: 30px;
+                    height: 30px;
+                    left: 16px;
+                    top: 16px;
+                }
+
+            }
+        }
+    }
+}
+.mint-your-section{
+    .heading-content{
+        max-width: 600px;
+        @media screen and (max-width:991px) {
+            max-width: 100%;
+        }
+    }
+}
+.testimonial-section{
+    .heading-content{
+        max-width: 675px;
+    }
+    .testimoanial-user-name{
+        img{    
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .testimonial-rating{
+        img{
+            width: 16px;
+        }
+    }
+}
+.faq-section{
+    .accordian-main{
+        max-width: 900px;
+        .accordion-wrap {
+            position: relative;
+            // padding: 20px 0;
+            border-bottom: 1px solid $color-DDDDDD;
+            @media only screen and (max-width: 767px) {
+                // padding: 15px 0;
+            }
+            .accordion-link {
+                padding: 20px 20px 20px 0;
+                display: block;
+                position: relative;
+                cursor: pointer;
+                transition: all .3s ease;
+                padding-right: 20px ;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../../assets/icons/arrow-down-222.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    transition: all .3s ease;
+                    background-position: center;
+    
+                    @media only screen and (max-width: 767px) {
+                        background-size: 12px;
+                    }
+                }
+    
+                &.is-open {
+                    margin-bottom: 16px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $color-DDDDDD;
+                    
+                    &:before {
+                        transform: rotate(180deg) translateY(50%);
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    padding: 15px 15px 15px 0;
+                }
+            }
+            .accordion-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-in-out;
+                p{
+                    margin-bottom: 15px;
+                }
+            }
+            ul {
+                padding-left: 25px;
+            }
+        }
+    }
+    .why-mint-hire-section{
+        .why-mint-desc{
+            color: $color-444444;
+            font-size: 16px;
+            line-height: 28px;
+            p{
+                padding-bottom: 16px;
+                font-size: 16px;
+                
+                @media screen and (max-width:767px){
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                &:last-child{
+                    padding-bottom: 0;
+                }
+            }
+            h3{
+                color: #222222;
+                font-size: 24px;
+                color: $color-222222;
+                font-weight: $fw-700;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                @media screen and (max-width:767px){
+                    font-size: $font-20;
+                    line-height: 25px;
+                    margin-bottom: 10px;
+                }
+            }
+           
+        }
+    }
+}
+
+
+// Page wise css start
+.shopify-optimization-page{
+
+    .store-development-section{
+        &.bg-light{
+            background-color: $color-F5F5F5;
+        }
+        .store-development-block-inner{
+            background-color: $color-24282C;
+            img{
+                width: 40px;
+            }
+            .block-desc,
+            .block-title{
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.shopify-seo-marketing-agency-page{
+    .image-content-section{
+        .image-section{
+            align-items: flex-start;
+        }
+    }
+   
+}
+
+.shopify-development-services-page,
+.shopify-store-setup-configurations-page{
+    .store-development-section{
+        .store-development-block-inner{
+            background-color: $color-white;
+        }
+        .block-title,
+        .block-desc{
+            color: $color-24282C;
+        }
+    }
+}
+
+.trouble-shooting-and-ongoing-support-service-page,
+.woocommerce-to-shopify-migration-services-page,
+.shopify-pixel-implementation-tracking-services-page,
+.shopify-theme-customization-page,
+.third-party-app-integeration-page,
+.trouble-shooting-and-online-support-service-page{
+    .shopify-agencies-section{
+        .services-block{
+            background-color: $color-F5F5F5;
+            border-radius: 10px;
+            margin-bottom: 0    ;
+            .checkdash-full{
+                ul{
+                    float: unset;
+                    li{
+                        color: $color-666666;
+                        padding-bottom: 13px;
+                        padding-top: 13px;
+                        border-top: 1px solid $color-DDDDDD;
+                        margin-bottom: 0;
+                        line-height: 1.4;
+                        &:last-child{
+                            border-bottom: 1px solid $color-DDDDDD;
+                            // margin-bottom: 15px;
+                        }
+                        &::before{
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background-color: $color-666666;
+                        }
+                        a{
+                            line-height: 1;
+                            color: $color-666666;
+                            @media screen and (max-width:767px){
+                                line-height: inherit;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+.magento-to-shopify-migration-services-page,
+.woocommerce-to-shopify-migration-services-page,
+.shopify-on-page-seo-services-page{
+    .image-content-section .row{
+        padding-top: 0;
+        
+        @media screen and (max-width: 991px) {
+            padding-top: 0;
+        }
+        @media screen and (max-width: 767px) {
+            padding-top: 0;
+        }
+    }
+}
+.third-party-app-integeration-page,
+.shopify-theme-customization-page,
+.trouble-shooting-and-online-support-service-page,
+.shopify-plus-scripts-page{
+    // .image-content-section .row{
+    //     padding-top: 0;
+        
+    //     @media screen and (max-width: 991px) {
+    //         padding-top: 0;
+    //     }
+    //     @media screen and (max-width: 767px) {
+    //         padding-top: 0;
+    //     }
+    // }
+    .image-section{
+        align-items: start;
+    }
+    .store-development-section {
+        .store-development-block-inner{
+            img{
+                width: 30px;
+            }
+        }
+    }
+}
+
+.shopify-new-store-build-page,
+.custom-landing-page-build-page,
+.shopify-speed-optimization-services-page{
+    .store-development-section{
+        &.bg-light{
+            .store-development-block-inner{
+                background-color: $color-white;
+            }
+            .block-title,
+            .block-desc{
+                color: $color-222222;
+            }
+        }
+    }
+}
+
+.migrate-to-shopify-2-0-page,
+.magento-to-shopify-migration-services-page{
+    .image-content-section{
+        padding-bottom: 0;
+    }
+}
+
+.shopify-theme-customization-page{
+    .store-development-section{
+        .heading-section{
+            max-width: 720px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+    }
+}
+
+.trouble-shooting-and-online-support-service-page{
+    .store-development-section {
+        .heading-section{
+            max-width: 800px;
+        }
+        .store-development-block-inner{
+            img{
+                width: 40px;
+            }
+        }
+        .block-desc{
+            ul{
+                padding-left: 20px;
+                li{
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.shopify-new-store-build-page{
+    // .banner-section.with-form-section .contact-right .wpcf7 .submit-form-btn{
+    //     padding-bottom: 0;
+    // }
+    .image-content-section{
+        .image-section{
+            img{
+                padding-top: 160px;
+                @media screen and (max-width:991px) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    .store-development-section{
+        .heading-section{
+            max-width: 850px;
+        }
+    }
+}
+
+.custom-landing-page-build-page{
+    .image-content-section{
+        .image-section{
+            img{
+                padding-top: 120px;
+                @media screen and (max-width:991px) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    .store-development-section{
+        .heading-section{
+            max-width: 901px;        
+        }
+    }
+}
+
+.shopify-speed-optimization-services-page{
+    .store-development-section{
+        .heading-section{
+            max-width: 900px;
+        }
+    }
+}
+
+.migrate-to-shopify-2-0-page{
+    .image-content-section .row{
+        padding-top: 0;
+        
+        @media screen and (max-width: 991px) {
+            padding-top: 0;
+        }
+        @media screen and (max-width: 767px) {
+            padding-top: 0;
+        }
+    }
+    .faq-section{
+        .why-mint-hire-section {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.magento-to-shopify-migration-services-page{
+    .why-mint-hire-section{
+        margin-bottom: 0;
+    }
+}
+
+.woocommerce-to-shopify-migration-services-page{
+    .store-development-block-inner{
+        img{
+            width: 40px;
+        }
+    }
+}
+
+.trouble-shooting-and-ongoing-support-service-page{
+    .store-development-section{
+        .block-desc {
+            padding-left: 20px;
+            ul{
+                li{
+                    text-align: left;
+                    &:not(:last-child){
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Page wise css End
+
+
+
+

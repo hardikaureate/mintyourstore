@@ -1,0 +1,29 @@
+@import "partials/fonts";
+@import "partials/variables";
+@import "partials/spacing.scss";
+
+.about-section{
+  @media screen and (max-width:767px) {
+    padding: 35px 0;
+  }
+  .about-top{
+      padding:50px;
+      border-radius:10px;
+      @media screen and (max-width:767px) {
+      padding: 25px;
+      }
+      h2{
+      margin-bottom: 20px;
+      @media screen and (max-width:767px) {
+        margin-bottom: 10px;
+      }
+      }
+      p{
+      color: #444444;
+      @media screen and (max-width:767px) {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
+  }
+}
